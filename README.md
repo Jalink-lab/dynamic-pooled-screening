@@ -1,5 +1,11 @@
 # FLIM time trace analysis with hit selection
 
+FLIM time trace analysis (FTTA-HS) is an extensive and versatile Fiji macro to analyze and visualize multi-cell time-lapse experiments, and detect hit cells based on user-set criteria.
+
+## Installation & requirements
+- several scripts/macros -? find out which
+- startup macros? -> replace 
+
 ## Preprocessing
 ### Drift correction
 
