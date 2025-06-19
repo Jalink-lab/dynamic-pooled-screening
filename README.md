@@ -4,9 +4,9 @@ FATSHOPS is a versatile Fiji macro collection to analyze and visualize multi-cel
 For non-screening applications it can function as a valuable tool for single-cell trace analysis, visualization and inspection.
 
 ## Simplified workflow
-- *[Loading images](https://github.com/Jalink-lab/dynamic-pooled-screening/#input-images)*
-- *[Pre-processing](https://github.com/Jalink-lab/dynamic-pooled-screening/#pre-processing)*
-- *Cell segmentation*
+- *[Loading images](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#input-images)*
+- *[Pre-processing](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#pre-processing)*
+- *[Cell segmentation](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#cell-segmentation)*
 - *Measuring single-cell (FLIM/intensity) traces*
 - *Visualization*
 - *Hit selection*
@@ -57,14 +57,17 @@ Optionally, image corrections can be performed as preprocessing steps:
 cell segmentation can be performed with [CellPose](https://github.com/MouseLand/cellpose) (2 or 3), operated from Fiji using [a wrapper](https://github.com/BIOP/ijl-utilities-wrappers). The image stack is first 'collapsed' using a summed-intensity projection of a subset or all of the time-lapse images, resulting in a single imageto segment. This procedure works well if the imaging is short enough that the cells do not move (a lot).
 The user can select the segmentation model (pretrained or custom) and needs to provide a few key parameters, e.g. cell diameter and [flow threshold](https://cellpose.readthedocs.io/en/v3.1.1.1/settings.html#flow-threshold). Additionally, restrictions on cell size and circularity can be imposed.
 
-## Time traces plot
+##Visualization
+### Time traces plot
 ![image](https://github.com/user-attachments/assets/0e74c287-5c79-4c21-8a04-5f3ba5db2ff9)
 
-## Scatter plots
+### Scatter plots
 Create movies
 ![image](https://github.com/user-attachments/assets/795e8728-2183-4817-8853-4252df1c7b67)
 
-## Screening: hit selection
+### Screening: hit selection
+
+
 ### Hit criteria panel
 ![image](https://github.com/user-attachments/assets/4d2f37da-727e-4e86-a424-0fa101b05ba6)
 
