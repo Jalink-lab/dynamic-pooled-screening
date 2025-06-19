@@ -10,6 +10,7 @@
 ![image](https://github.com/user-attachments/assets/0e74c287-5c79-4c21-8a04-5f3ba5db2ff9)
 
 ## Scatter plots
+Create movies
 ![image](https://github.com/user-attachments/assets/795e8728-2183-4817-8853-4252df1c7b67)
 
 ## Screening: hit selection
@@ -21,3 +22,5 @@ The time window used in the hit selection is highlighted in blue.
 ![image](https://github.com/user-attachments/assets/10db5f6a-a2f5-4ba7-9ba2-50f826b496a7)
 ![image](https://github.com/user-attachments/assets/be2f6ab5-ea0c-4646-97f4-77cfa6519d20)
 
+### derivative trace
+![image](https://github.com/user-attachments/assets/52832275-d256-4162-8a86-7ee22ab6f2df)
