@@ -1,7 +1,6 @@
-# FACTSHOPS - FLIM Analysis of Cell Traces and Selection of Hits for Optical Pooled Screening
-# DEFACTO - Dynamics Evaluation by FLIM analysis of Cell Trace Objects
+# FAST-HIPPOS: FLIM Analysis of Single-cell Traces for Hit Identification of Phenotypes in Pooled Optical Screening
 
-FACTSHOPS is a collection of Fiji scripts to analyze and visualize multi-cell time-lapse experiments, detect hit cells based on user-set criteria and output their stage coordinates for e.g. photoactivation.
+FAST-HIPPOS is a collection of Fiji scripts to analyze and visualize multi-cell time-lapse experiments, detect hit cells based on user-set criteria and output their stage coordinates for e.g. photoactivation.
 For non-screening applications it can function as a valuable tool for single-cell trace analysis, visualization and inspection.
 
 ## Simplified workflow
@@ -45,21 +44,24 @@ FLIM is supported in several ways (mostly for Leica images):
 
 The macro can batch-process multiple files as well.
 
-Upon loading of a two-component FLIM image a 'weighted lifetime' image is created with at every pixel the *average* intensity-weighted lifetime.
-
-
 ## 2. Pre-processing
 Optionally, image corrections can be performed as preprocessing steps:
 1. Drift correction. A cross-correlation (cc) of image frames is performed with either the first frame, the previous frame or the last frame. CLIJ2 image projection functions are used to quickly determine the coordinates of the maximum pixel in the cross-correlation image, its distance from the center representing the shift. Drift correction is performed on the calculated intensity image (i.e. the addition of the two components, if applicable).
 3. Bidirectional scanning phase mismatch correction. The even and odd lines are split and turned into two separate images. Cross-correlating these images and locating the peak yields the shift between the phases. The two images are both shifted half this distance and interleaved again:
 
-  ![image](https://github.com/user-attachments/assets/66408493-ec41-4c4b-9413-3d6ae136e932)
+![image](https://github.com/user-attachments/assets/66408493-ec41-4c4b-9413-3d6ae136e932)
 
+After these optional steps, a 'weighted lifetime' image is created. For single-component FLIM images ('FAST FLIM', 'TauContrast', Frequency-domain FLIM) this is simply the lifetime; for a two-component FLIM image this is equal to the *intensity-weighted* lifetime. (Note that the intensities here are the intensities of the lifetime components!)
+Additionally, an 'RGB overlay image' is created, where a (x,y,t) smoothed version of this lifetime image is multiplied (overlayed) by the total intensity image, yielding a denoised visualization of the experiment.  
+
+![Cos7H250_ADRB2KO_1 (weighted lifetime)](https://github.com/user-attachments/assets/c66ad486-1d79-4c6b-9b3c-e95d7b4d6683)
+![Cos7H250_ADRB2KO_1 (lifetime   intensity RGB overlay)](https://github.com/user-attachments/assets/3aba7cb8-d64b-4d65-964f-4af346cb6eb5)
 
 ## 3. Cell segmentation
 cell segmentation can be performed with [CellPose](https://github.com/MouseLand/cellpose) (2 or 3), operated from Fiji using [a wrapper](https://github.com/BIOP/ijl-utilities-wrappers). The image stack is first 'collapsed' using a summed-intensity projection of a subset or all of the time-lapse images, resulting in a single imageto segment. This procedure works well if the imaging is short enough that the cells do not move (a lot).
 The user can select the segmentation model (pretrained or custom) and needs to provide a few key parameters, e.g. cell diameter and [flow threshold](https://cellpose.readthedocs.io/en/v3.1.1.1/settings.html#flow-threshold). Additionally, restrictions on cell size and circularity can be imposed.
 
+![Cos7H250_ADRB2KO_1 (lifetime   intensity RGB overlay)](https://github.com/user-attachments/assets/eb3099c0-e9e6-4d8c-8000-a7d5b41892c9)
 
 ## 4. Measuring single-cell (FLIM/intensity) traces
 After cell segmentation ROIs are created from the obtained label image, after which intensities and average fluorescence lifetimes are computed for every cell, at every time point. This average lifetime is the weighted lifetime, where each pixel of a cell is linearly weighted with its intensity fraction.
