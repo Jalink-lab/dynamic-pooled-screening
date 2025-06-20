@@ -8,7 +8,7 @@ For non-screening applications it can function as a valuable tool for single-cel
 - *[Pre-processing](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#pre-processing)*
 - *[Cell segmentation](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#cell-segmentation)*
 - *Measuring single-cell (FLIM/intensity) traces*
-- *Visualization*
+- *[Visualization](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#visualization)*
 - *Hit selection*
 - *Output files*
 
@@ -44,6 +44,8 @@ FLIM is supported in several ways (mostly for Leica images):
 
 The macro can batch-process multiple files as well.
 
+Upon loading of a two-component FLIM image a 'weighted lifetime' image is created with at every pixel the *average* intensity-weighted lifetime.
+
 
 ## Pre-processing
 Optionally, image corrections can be performed as preprocessing steps:
@@ -56,6 +58,11 @@ Optionally, image corrections can be performed as preprocessing steps:
 ## Cell segmentation
 cell segmentation can be performed with [CellPose](https://github.com/MouseLand/cellpose) (2 or 3), operated from Fiji using [a wrapper](https://github.com/BIOP/ijl-utilities-wrappers). The image stack is first 'collapsed' using a summed-intensity projection of a subset or all of the time-lapse images, resulting in a single imageto segment. This procedure works well if the imaging is short enough that the cells do not move (a lot).
 The user can select the segmentation model (pretrained or custom) and needs to provide a few key parameters, e.g. cell diameter and [flow threshold](https://cellpose.readthedocs.io/en/v3.1.1.1/settings.html#flow-threshold). Additionally, restrictions on cell size and circularity can be imposed.
+
+
+## Measuring single-cell (FLIM/intensity) traces
+After segmentation ROIs are created from the obtained label image, after which intensities are measured. In the case of FLIM images the average lifetime over time is also measured for every cell in the weighted lifetime image, with each pixel of a cell linearly weighted with its intensity fraction of that cell in order to reduce noise from (ill-fitted) low-intensity pixels.
+
 
 ## Visualization
 ### Time traces plot
