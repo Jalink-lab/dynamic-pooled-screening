@@ -7,7 +7,7 @@ For non-screening applications it can function as a valuable tool for single-cel
 - *[Loading images](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#input-images)*
 - *[Pre-processing](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#pre-processing)*
 - *[Cell segmentation](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#cell-segmentation)*
-- *Measuring single-cell (FLIM/intensity) traces*
+- *[Measuring single-cell (FLIM/intensity) traces](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#measuring-single-cell-flimintensity-traces)*
 - *[Visualization](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#visualization)*
 - *Hit selection*
 - *Output files*
