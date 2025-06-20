@@ -1,4 +1,4 @@
-# FACTSHOPS - FLIM Analysis of Cell Time traces and Selection of Hits for Optical Pooled Screening
+# FACTSHOPS - FLIM Analysis of Cell Traces and Selection of Hits for Optical Pooled Screening
 # DEFACTO - Dynamics Evaluation by FLIM analysis of Cell Trace Objects
 
 FACTSHOPS is a collection of Fiji scripts to analyze and visualize multi-cell time-lapse experiments, detect hit cells based on user-set criteria and output their stage coordinates for e.g. photoactivation.
