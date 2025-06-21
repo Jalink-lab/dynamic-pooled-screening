@@ -89,6 +89,7 @@ This is an image with time as y-coordinate, Cell ID as x-coordinate and cell lif
 
 ### Density plot
 A 2D histogram with lifetime on the y-axis and time on the x-axis. This image allows investigating the heterogeneity of single-cell traces better than the Time Traces plot.
+
 <img src="https://github.com/user-attachments/assets/9b904263-e3ae-46f2-ab06-7fdb56b0b5af" title="Density plot" width="400">
 
 # 6. Screening: hit selection
