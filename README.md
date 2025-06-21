@@ -9,7 +9,7 @@ For non-screening applications it can function as a valuable tool for single-cel
 3. *[Cell segmentation](https://github.com/Jalink-lab/dynamic-pooled-screening/#3-cell-segmentation)*
 4. *[Measuring single-cell (FLIM/intensity) traces](https://github.com/Jalink-lab/dynamic-pooled-screening/#4-measuring-single-cell-flimintensity-traces)*
 5. *[Visualization](https://github.com/Jalink-lab/dynamic-pooled-screening/#5-visualization)*
-6. *[Hit selection](https://github.com/Jalink-lab/dynamic-pooled-screening/#screening-hit-selection)*
+6. *[Hit selection](https://github.com/Jalink-lab/dynamic-pooled-screening/#6-screening-hit-selection)*
 7. *Output files*
 
 <hr>
@@ -88,7 +88,7 @@ This is an image with time as Y-coordinate, Cell ID as X-coordinate and cell lif
 ![Cos7H250_ADRB2KO_1 (kymograph sorted)](https://github.com/user-attachments/assets/bd32872a-b9af-4a52-b63e-8e685f17850e)
 
 
-# Screening: hit selection
+# 6. Screening: hit selection
 
 ### Hit criteria panel
 ![image](https://github.com/user-attachments/assets/4d2f37da-727e-4e86-a424-0fa101b05ba6)
