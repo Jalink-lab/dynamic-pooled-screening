@@ -9,7 +9,7 @@ For non-screening applications it can function as a valuable tool for single-cel
 3. *[Cell segmentation](https://github.com/Jalink-lab/dynamic-pooled-screening/#3-cell-segmentation)*
 4. *[Measuring single-cell (FLIM/intensity) traces](https://github.com/Jalink-lab/dynamic-pooled-screening/#4-measuring-single-cell-flimintensity-traces)*
 5. *[Visualization](https://github.com/Jalink-lab/dynamic-pooled-screening/#5-visualization)*
-6. *Hit selection*
+6. *[Hit selection](https://github.com/Jalink-lab/dynamic-pooled-screening/#screening-hit-selection)*
 7. *Output files*
 
 <hr>
