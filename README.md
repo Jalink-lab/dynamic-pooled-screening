@@ -3,7 +3,33 @@
 FAST-HIPPOS is a collection of Fiji scripts to analyze and visualize multi-cell time-lapse experiments, detect hit cells based on user-set criteria and output their stage coordinates for e.g. photoactivation.
 For non-screening applications it can function as a valuable tool for single-cell trace analysis, visualization and inspection.
 
-## Simplified workflow
+
+<hr>
+
+## Installation & requirements
+Required activated [Fiji Update Sites](https://imagej.net/update-sites/following) (via Help -> Update... -> Manage Update Sites):
+- FAST-HIPPOS
+- CLIJ
+- CLIJ2
+- CSBDeep
+- ImageScience
+- IJ-PB Plugins
+- PTBIOP
+- SCF MPI CBG
+(- StarDist)
+
+~~In order to run the macro you need the following scripts:~~
+[This will be replaced by the FIji Update Site]
+- several scripts/macros:
+  - inspect and select traces (macro tool, now in startup macros)
+  - helper scripts
+  - stitching
+  - drift
+  - bidir correction
+
+<hr>
+
+## Workflow
 1. *[Loading input images](https://github.com/Jalink-lab/dynamic-pooled-screening/#1-input-images)*
 2. *[Pre-processing](https://github.com/Jalink-lab/dynamic-pooled-screening/#2-pre-processing)*
 3. *[Cell segmentation](https://github.com/Jalink-lab/dynamic-pooled-screening/#3-cell-segmentation)*
@@ -11,23 +37,6 @@ For non-screening applications it can function as a valuable tool for single-cel
 5. *[Visualization](https://github.com/Jalink-lab/dynamic-pooled-screening/#5-visualization)*
 6. *[Hit selection](https://github.com/Jalink-lab/dynamic-pooled-screening/#6-screening-hit-selection)*
 7. *Output files*
-
-<hr>
-
-## Installation & requirements
-Required activated [Fiji Update Sites](https://imagej.net/update-sites/following):
-- Fiji Update sites:
-  - ImageScience
-  - ...
-
-In order to run the macro you need the following scripts:
-- several scripts/macros -? find out which:
-  - inspect and select traces (macro tool, now in startup macros)
-  - helper scripts
-  - stitching
-  - drift
-  - bidir correction
-
 
 ## 1. Input images
 Input images are multi-channel `.tif` files, or any proprietary microscopy format that is [supported by Bio-Formats](https://bio-formats.readthedocs.io/en/v8.2.0/supported-formats.html), including files containing multiple images.
