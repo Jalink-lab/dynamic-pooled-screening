@@ -107,8 +107,11 @@ A 2D histogram with lifetime on the y-axis and time on the x-axis. This image al
 ![image](https://github.com/user-attachments/assets/4d2f37da-727e-4e86-a424-0fa101b05ba6)
 
 ### Time traces plot of hits
-The time window used in the hit selection is highlighted in blue.
-![image](https://github.com/user-attachments/assets/10db5f6a-a2f5-4ba7-9ba2-50f826b496a7)
+The time window used in the hit selection (here the full response time) is highlighted in blue. Compare with the plot containing all the single-cell traces:
+
+<img src="https://github.com/user-attachments/assets/3ea842f1-83b4-49fc-842f-ce76d3c63542" title="lifetime traces plot - hits only" width="510">
+<img src="https://github.com/user-attachments/assets/a23f8818-b754-4b01-93ab-b5e1a6dff63e" title="lifetime traces plot" width="510">
+
 ![image](https://github.com/user-attachments/assets/be2f6ab5-ea0c-4646-97f4-77cfa6519d20)
 
 
