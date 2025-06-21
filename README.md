@@ -4,11 +4,11 @@ FAST-HIPPOS is a collection of Fiji scripts to analyze and visualize multi-cell 
 For non-screening applications it can function as a valuable tool for single-cell trace analysis, visualization and inspection.
 
 ## Simplified workflow
-1. *[Loading images](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#input-images)*
-2. *[Pre-processing](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#pre-processing)*
-3. *[Cell segmentation](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#cell-segmentation)*
-4. *[Measuring single-cell (FLIM/intensity) traces](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#measuring-single-cell-flimintensity-traces)*
-5. *[Visualization](https://github.com/Jalink-lab/dynamic-pooled-screening/blob/main/README.md#visualization)*
+1. *[Loading input images](https://github.com/Jalink-lab/dynamic-pooled-screening/#1-input-images)*
+2. *[Pre-processing](https://github.com/Jalink-lab/dynamic-pooled-screening/#2-pre-processing)*
+3. *[Cell segmentation](https://github.com/Jalink-lab/dynamic-pooled-screening/#3-cell-segmentation)*
+4. *[Measuring single-cell (FLIM/intensity) traces](https://github.com/Jalink-lab/dynamic-pooled-screening/#4-measuring-single-cell-flimintensity-traces)*
+5. *[Visualization](https://github.com/Jalink-lab/dynamic-pooled-screening/#5-visualization)*
 6. *Hit selection*
 7. *Output files*
 
