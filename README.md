@@ -46,8 +46,10 @@ The macro can batch-process multiple files as well.
 
 ## 2. Pre-processing
 Optionally, image corrections can be performed as preprocessing steps:
-1. Drift correction. A cross-correlation (cc) of image frames is performed with either the first frame, the previous frame or the last frame. CLIJ2 image projection functions are used to quickly determine the coordinates of the maximum pixel in the cross-correlation image, its distance from the center representing the shift. Drift correction is performed on the calculated intensity image (i.e. the addition of the two components, if applicable).
+1. Stitching of mylti-tiled experiments, with the separate command `Stitch tiles` (tested for Leica `.lif` files). Fast 'no-calculation' stitching is done using the [Grid/Collection Stitching plugin](https://imagej.net/plugins/grid-collection-stitching) to ensure correct pixel size[^1] and to prevent image distortion. XY-Stage coordinates of image tiles are extracted from the OME metadata of the `.lif` file and stored in the stitched `.tif` file, together with the grid layout, the tile size and the tile overlap percentage.
+2. Drift correction. A cross-correlation (cc) of image frames is performed with either the first frame, the previous frame or the last frame. CLIJ2 image projection functions are used to quickly determine the coordinates of the maximum pixel in the cross-correlation image, its distance from the center representing the shift. Drift correction is performed on the calculated intensity image (i.e. the addition of the two components, if applicable).
 3. Bidirectional scanning phase mismatch correction. The even and odd lines are split and turned into two separate images. Cross-correlating these images and locating the peak yields the shift between the phases. The two images are both shifted half this distance and interleaved again:
+[^1]: The exported pixel size is not entirely correct, causing an increasing deviation in the cell coordinates for increasing x and y.
 
 ![image](https://github.com/user-attachments/assets/66408493-ec41-4c4b-9413-3d6ae136e932)
 
@@ -67,23 +69,23 @@ The user can select the segmentation model (pretrained or custom) and needs to p
 After cell segmentation ROIs are created from the obtained label image, after which intensities and average fluorescence lifetimes are computed for every cell, at every time point. This average lifetime is the weighted lifetime, where each pixel of a cell is linearly weighted with its intensity fraction.
 
 The script automatically determines the time points of a(nta)gonist stimulation and calibration by detecting peaks in the second derivative of the average trace of all cells. If the peaks are higher than a set number of times the stddev of the signal it is picked up. If successful, cell traces are divided into three parts: *baseline*, *response*, and *calibration*. If not, manual input of the time points is also possible. These three partitions are used for detection of hit cells when screening for dynamic phenotypes.
-![image](https://github.com/user-attachments/assets/52832275-d256-4162-8a86-7ee22ab6f2df)
+
+<img src="https://github.com/user-attachments/assets/52832275-d256-4162-8a86-7ee22ab6f2df" title="first and second derivative trace " width="500">
 
 ## 5. Visualization
 The data is visualized in various graphs and images:
 ### Time traces plot
-![image](https://github.com/user-attachments/assets/0e74c287-5c79-4c21-8a04-5f3ba5db2ff9)
+<img src="https://github.com/user-attachments/assets/a23f8818-b754-4b01-93ab-b5e1a6dff63e" title="lifetime traces plot" width="510">
 
-### Timelapse Lifetime histogram
-![Cos7H250_ADRB2KO_2 (lifetime histogram)](https://github.com/user-attachments/assets/87c92c02-cf5d-4e7f-b391-40c858a6ffa9)
+### Timelapse Lifetime histogram and scatterplots
+<img src="https://github.com/user-attachments/assets/87c92c02-cf5d-4e7f-b391-40c858a6ffa9" width="500">
+<img src="https://github.com/user-attachments/assets/d750ebd6-a1d4-4687-83cc-bfae930cc858" width="500">
 
-### Timelapse Scatter plots
-![Cos7H250_ADRB2KO_2 (scatterplot MEAN_INTENSITY)](https://github.com/user-attachments/assets/d750ebd6-a1d4-4687-83cc-bfae930cc858)
+### Kymographs
+This is an image with time as Y-coordinate, Cell ID as X-coordinate and cell lifetime as value. Additionally, a 'sorted kymograph' is created, where the X-axis is sorted on the average response lifetime.
 
-### Kymograph, sorted on response
-![image](https://github.com/user-attachments/assets/1a6b5978-0408-4b9b-9861-464f1f481cee)
-
-
+![Cos7H250_ADRB2KO_1 (kymograph)](https://github.com/user-attachments/assets/5c64cad6-374c-481d-8b0c-273819a7bcce)
+![Cos7H250_ADRB2KO_1 (kymograph sorted)](https://github.com/user-attachments/assets/bd32872a-b9af-4a52-b63e-8e685f17850e)
 
 
 # Screening: hit selection
