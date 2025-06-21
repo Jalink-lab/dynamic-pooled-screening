@@ -70,7 +70,7 @@ After cell segmentation ROIs are created from the obtained label image, after wh
 
 The script automatically determines the time points of a(nta)gonist stimulation and calibration by detecting peaks in the second derivative of the average trace of all cells. If the peaks are higher than a set number of times the stddev of the signal it is picked up. If successful, cell traces are divided into three parts: *baseline*, *response*, and *calibration*. If not, manual input of the time points is also possible. These three partitions are used for detection of hit cells when screening for dynamic phenotypes.
 
-<img src="https://github.com/user-attachments/assets/52832275-d256-4162-8a86-7ee22ab6f2df" title="first and second derivative trace " width="500">
+<img src="https://github.com/user-attachments/assets/52832275-d256-4162-8a86-7ee22ab6f2df" title="first and second derivative of the average trace" width="500">
 
 ## 5. Visualization
 The data is visualized in various graphs and images:
@@ -78,15 +78,18 @@ The data is visualized in various graphs and images:
 <img src="https://github.com/user-attachments/assets/a23f8818-b754-4b01-93ab-b5e1a6dff63e" title="lifetime traces plot" width="510">
 
 ### Timelapse Lifetime histogram and scatterplots
-<img src="https://github.com/user-attachments/assets/87c92c02-cf5d-4e7f-b391-40c858a6ffa9" width="400">
-<img src="https://github.com/user-attachments/assets/d750ebd6-a1d4-4687-83cc-bfae930cc858" width="400">
+<img src="https://github.com/user-attachments/assets/87c92c02-cf5d-4e7f-b391-40c858a6ffa9" title="Kymograph" width="400">
+<img src="https://github.com/user-attachments/assets/d750ebd6-a1d4-4687-83cc-bfae930cc858" title="Sorted Kymograph" width="400">
 
 ### Kymographs
-This is an image with time as Y-coordinate, Cell ID as X-coordinate and cell lifetime as value. Additionally, a 'sorted kymograph' is created, where the X-axis is sorted on the average response lifetime.
+This is an image with time as y-coordinate, Cell ID as x-coordinate and cell lifetime as value. Additionally, a 'sorted kymograph' is created, where the X-axis is sorted on the average response lifetime.
 
 ![Cos7H250_ADRB2KO_1 (kymograph)](https://github.com/user-attachments/assets/5c64cad6-374c-481d-8b0c-273819a7bcce)
 ![Cos7H250_ADRB2KO_1 (kymograph sorted)](https://github.com/user-attachments/assets/bd32872a-b9af-4a52-b63e-8e685f17850e)
 
+### Density plot
+A 2D histogram with lifetime on the y-axis and time on the x-axis. This image allows investigating the heterogeneity of single-cell traces better than the Time Traces plot.
+<img src="https://github.com/user-attachments/assets/9b904263-e3ae-46f2-ab06-7fdb56b0b5af" title="Density plot" width="400">
 
 # 6. Screening: hit selection
 
