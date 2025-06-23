@@ -77,7 +77,7 @@ The user can select the segmentation model (pretrained or custom) and needs to p
 ## 4. Measuring single-cell (FLIM/intensity) traces
 After cell segmentation ROIs are created from the obtained label image, after which intensities and average fluorescence lifetimes are computed for every cell, at every time point. This average lifetime is the weighted lifetime, where each pixel of a cell is linearly weighted with its intensity fraction.
 
-The script automatically determines the time points of a(nta)gonist stimulation and calibration by detecting peaks in the second derivative of the average trace of all cells. If the peaks are higher than a set number of times the stddev of the signal it is picked up. If successful, cell traces are divided into three parts: *baseline*, *response*, and *calibration*. If not, manual input of the time points is also possible. These three partitions are used for detection of hit cells when screening for dynamic phenotypes.
+The script automatically tries to determine the time points of a(nta)gonist stimulation and calibration by detecting peaks in the second derivative of the average trace of all cells. If the peaks are higher than a set number of times the stddev of the signal it is picked up. If successful, cell traces are divided into three parts: *baseline*, *response*, and *calibration*. If not, manual input of the time points is also possible. These three partitions are used for detection of hit cells when screening for dynamic phenotypes. If no stimulation and calibration frame are found or set, the full trace is regarded as *response*.
 
 <img src="https://github.com/user-attachments/assets/52832275-d256-4162-8a86-7ee22ab6f2df" title="first and second derivative of the average trace" width="500">
 
@@ -102,6 +102,7 @@ A 2D histogram with lifetime on the y-axis and time on the x-axis. This image al
 <img src="https://github.com/user-attachments/assets/9b904263-e3ae-46f2-ab06-7fdb56b0b5af" title="Density plot" width="400">
 
 # 6. Screening: hit selection
+An optional feature
 
 ### Hit criteria panel
 ![image](https://github.com/user-attachments/assets/4d2f37da-727e-4e86-a424-0fa101b05ba6)
