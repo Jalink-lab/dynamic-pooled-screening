@@ -102,12 +102,14 @@ A 2D histogram with lifetime on the y-axis and time on the x-axis. This image al
 <img src="https://github.com/user-attachments/assets/9b904263-e3ae-46f2-ab06-7fdb56b0b5af" title="Density plot" width="400">
 
 # 6. Screening: hit selection
-An optional feature
+When `activate screening` is selected in the starting dialog, cells showing certain kinetic behaviour can be detected, and the stage coordinates of these 'hit'cells are written to a `.rgn` file for subsequent photoactivation (or e.g. high-resolution imaging, run FRAP experiments, etc.). This file can then be loaded into the Leica LAS X Navigator, where the hit cells will be marked as imaging positions.
+Because many possible interesting dynamic phenotypes exist, the script provides several possible rules and criteria, that can be combined (AND / OR) when desired:
 
 ### Hit criteria panel
 ![image](https://github.com/user-attachments/assets/4d2f37da-727e-4e86-a424-0fa101b05ba6)
 
 ### Time traces plot of hits
+...
 The time window used in the hit selection (here the full response time) is highlighted in blue. Compare with the plot containing all the single-cell traces:
 
 <img src="https://github.com/user-attachments/assets/3ea842f1-83b4-49fc-842f-ce76d3c63542" title="lifetime traces plot - hits only" width="510">
