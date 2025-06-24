@@ -110,12 +110,14 @@ Because many possible interesting dynamic phenotypes exist, the script provides 
 ![image](https://github.com/user-attachments/assets/4d2f37da-727e-4e86-a424-0fa101b05ba6)
 
 ### Time traces plot of hits
-...
-The time window used in the hit selection (here the full response time) is highlighted in blue. Compare with the plot containing all the single-cell traces:
+After hit detection, a graph is generated showing only the traces of the hit cells. Here, the selected time window used in the hit selection (in this example the full response time) is highlighted in blue. Compare with the plot containing all the single-cell traces:
 
 <img src="https://github.com/user-attachments/assets/3ea842f1-83b4-49fc-842f-ce76d3c63542" title="lifetime traces plot - hits only" width="510">
 <img src="https://github.com/user-attachments/assets/a23f8818-b754-4b01-93ab-b5e1a6dff63e" title="lifetime traces plot" width="510">
 
-![image](https://github.com/user-attachments/assets/be2f6ab5-ea0c-4646-97f4-77cfa6519d20)
+The hit cells are also displayed in a table, as well as their positions graphically:
 
+<img src="https://github.com/user-attachments/assets/07703a58-82ac-4303-b720-fc5a0f071c2b" title="lifetime traces plot" width="500">
+<img src="https://github.com/user-attachments/assets/fca0f6d1-65bb-4f7a-8b42-6208eda40602" title="lifetime traces plot" width="450">
 
+Most importantly, the positions of these cells are saved to a `.rgn` file, that can be loaded into the LAS X Navigator for e.g. photoactivation of the (top) hit cells.
