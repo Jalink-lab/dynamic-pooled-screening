@@ -19,15 +19,6 @@ Required activated [Fiji Update Sites](https://imagej.net/update-sites/following
 - SCF MPI CBG
 (- StarDist)
 
-~~In order to run the macro you need the following scripts:~~
-[This will be replaced by the FIji Update Site]
-- several scripts/macros:
-  - inspect and select traces (macro tool, now in startup macros)
-  - helper scripts
-  - stitching
-  - drift
-  - bidir correction
-
 <hr>
 
 ## Workflow
